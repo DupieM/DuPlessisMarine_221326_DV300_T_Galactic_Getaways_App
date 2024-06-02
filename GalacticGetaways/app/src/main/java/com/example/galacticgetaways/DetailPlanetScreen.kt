@@ -1,5 +1,6 @@
 package com.example.galacticgetaways
 
+import android.widget.Space
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -9,6 +10,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -17,6 +22,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.example.galacticgetaways.ui.theme.GalacticGetawaysTheme
 
@@ -101,6 +107,154 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
 
             }
         }
+
+        Text(
+            text = "THE EARTH",
+            color = Color.White,
+            fontSize = 40.sp,
+            fontWeight = FontWeight.ExtraBold
+        )
+
+        Spacer(modifier = modifier.height(3.dp))
+
+        Text(
+            text = "Nestled in the vastness of space, Earth is the third " +
+                    "planet from the Sun and the only known celestial body " +
+                    "to harbour life (so far). With its diverse ecosystems, " +
+                    "ranging from lush forests to expansive deserts, and its " +
+                    "vast oceans teeming with life, Earth is a vibrant oasis " +
+                    "in the cosmos. Its atmosphere provides the perfect " +
+                    "conditions for a rich tapestry of flora and fauna, " +
+                    "making it a haven for countless species, including humans." +
+                    " From the highest peaks to the deepest ocean trenches, " +
+                    "Earth's beauty and biodiversity inspire awe and reverence," +
+                    " earning it the nickname \"The Blue Jewel\" of the solar " +
+                    "system.",
+            color = Color.White,
+            fontSize = 10.8.sp,
+            lineHeight = 1.3.em
+        )
+
+        Spacer(modifier = modifier.height(14.dp))
+
+        Row {
+            Card (
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(17,8,62)
+                )
+            ){
+                Row (
+                    modifier = Modifier
+                        .padding(10.dp)
+                ){
+                    Column {
+                        Text(
+                            text = "71%",
+                            color = Color.White,
+                            fontSize = 30.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+
+                        Text(
+                            text = "H2O Surface Coverage",
+                            color = Color.White,
+                            fontSize = 10.sp
+                        )
+                    }
+
+                    Spacer(modifier = modifier.width(18.dp))
+
+                    Image(
+                        painter = painterResource(id = R.drawable.humidity),
+                        contentDescription = "Water Drop",
+                        modifier = Modifier
+                            .height(60.dp)
+                            .width(30.dp)
+                    )
+                }
+            }
+
+            Spacer(modifier = modifier.width(10.dp))
+
+            Card (
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(17,8,62)
+                )
+            ){
+                Row (
+                    modifier = Modifier
+                        .padding(10.dp)
+                ){
+                    Column {
+                        Text(
+                            text = "42%",
+                            color = Color.White,
+                            fontSize = 30.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+
+                        Text(
+                            text = "Technology Advancement",
+                            color = Color.White,
+                            fontSize = 8.sp
+                        )
+                    }
+
+                    Image(
+                        painter = painterResource(id = R.drawable.tech),
+                        contentDescription = "Technology",
+                        modifier = Modifier
+                            .height(60.dp)
+                            .width(40.dp)
+                    )
+                }
+            }
+        }
+
+        Spacer(modifier = modifier.height(14.dp))
+
+        Card (
+            colors = CardDefaults.cardColors(
+                containerColor = Color(17,8,62)
+            )
+        ){
+            Row (
+                modifier = Modifier
+                    .padding(16.dp)
+            ){
+                Column {
+                    Text(
+                        text = "Facts about earth",
+                        color = Color.White,
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+
+                    Text(
+                        text = "3 videos available",
+                        color = Color.White,
+                        fontSize = 13.sp
+                    )
+                }
+
+                Spacer(modifier = modifier.width(66.dp))
+
+                Button(
+                    onClick = { /*TODO*/ },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(121, 32, 194)
+                    )
+                ) {
+                    Text(
+                        text = "Watch",
+                        fontSize = 14.sp
+                    )
+                }
+
+
+            }
+        }
+
 
     }
 }
