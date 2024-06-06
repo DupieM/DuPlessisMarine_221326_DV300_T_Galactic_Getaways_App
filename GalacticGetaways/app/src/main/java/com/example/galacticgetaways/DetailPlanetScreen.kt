@@ -34,6 +34,8 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
             .background(color = Color(9, 0, 17))
             .padding(20.dp)
     ){
+
+        // Back and bookmark icon
         Row {
             Image(
                 painter = painterResource(id = R.drawable.baseline_arrow_back_24),
@@ -61,6 +63,7 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
 
         Spacer(modifier = modifier.height(3.dp))
 
+        // Earth Image
         Image(
             painter = painterResource(id = R.drawable.earth),
             contentDescription = "Earth",
@@ -69,7 +72,9 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
                 .width(350.dp)
         )
 
+        // Start of Main Content
         Row {
+            // Left align text for "Planet"
             Text(
                 text = "Planet",
                 color = Color.White,
@@ -77,6 +82,7 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
 
             Spacer(modifier = modifier.width(200.dp))
 
+            // Right aligend Content for reviews and rating
             Column {
                 Row (
                     modifier = Modifier.padding(start = 44.dp)
@@ -108,6 +114,7 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
             }
         }
 
+        // The text "The Earth" and the Description
         Text(
             text = "THE EARTH",
             color = Color.White,
@@ -137,6 +144,7 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
 
         Spacer(modifier = modifier.height(14.dp))
 
+        // Start of the three cards
         Row {
             Card (
                 colors = CardDefaults.cardColors(
@@ -147,7 +155,9 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
                     modifier = Modifier
                         .padding(10.dp)
                 ){
+                    // Card 1 - H2O Surface Coverage
                     Column {
+                        //Left Text Content
                         Text(
                             text = "71%",
                             color = Color.White,
@@ -164,6 +174,7 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
 
                     Spacer(modifier = modifier.width(18.dp))
 
+                    // Right Content Image
                     Image(
                         painter = painterResource(id = R.drawable.humidity),
                         contentDescription = "Water Drop",
@@ -181,10 +192,12 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
                     containerColor = Color(17,8,62)
                 )
             ){
+                // Card 2 - Technology Advancement
                 Row (
                     modifier = Modifier
                         .padding(10.dp)
                 ){
+                    //Left Text Content
                     Column {
                         Text(
                             text = "42%",
@@ -200,6 +213,7 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
                         )
                     }
 
+                    // Right Content Image
                     Image(
                         painter = painterResource(id = R.drawable.tech),
                         contentDescription = "Technology",
@@ -218,10 +232,12 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
                 containerColor = Color(17,8,62)
             )
         ){
+            // Card 3 - Button and Facts
             Row (
                 modifier = Modifier
                     .padding(16.dp)
             ){
+                // Right aligend Content
                 Column {
                     Text(
                         text = "Facts about earth",
@@ -239,6 +255,7 @@ fun DetailPlanetScreen(name: String, modifier: Modifier = Modifier) {
 
                 Spacer(modifier = modifier.width(66.dp))
 
+                // Left alinged Content
                 Button(
                     onClick = { /*TODO*/ },
                     colors = ButtonDefaults.buttonColors(
